@@ -18,7 +18,7 @@
         <div class="container">
             <div class="banner-content wow fadeInUp">
                 <h1 class="title">{{ $landing_data['fixed_header_title'] }}</h1>
-                <img class="w-100 onerror-image" data-onerror-image="{{ asset('public/assets/admin/img/160x160/img2.jpg') }}"
+                <img class="w-100 onerror-image" data-onerror-image="{{ asset('assets/admin/img/160x160/img2.jpg') }}"
                     src="{{ \App\CentralLogics\Helpers::get_full_url('business', $logo?->value ?? '', $logo?->storage[0]?->value ?? 'public', 'favicon') }}"
                     alt="">
                 <div class="text">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="px-xl-5 d-flex justify-content-center text-base banner-svg-img">
-            <img src="{{asset('public/assets/landing/img/main-banner.svg')}}" class="svg" alt="">
+            <img src="{{asset('assets/landing/img/main-banner.svg')}}" class="svg" alt="">
         </div>
     </section>
     <!-- ==== Banner Section Ends Here ==== -->
@@ -50,8 +50,8 @@
                         @foreach ($modules as $key => $item)
                             <div class="item">
                                 <img class="__img-50 onerror-image"
-                                    data-onerror-image="{{ asset('public/assets/admin/img/100x100/2.png') }}"
-                                    src="{{ $item['icon_full_url'] ?? asset('public/assets/admin/img/100x100/2.png') }}"
+                                    data-onerror-image="{{ asset('assets/admin/img/100x100/2.png') }}"
+                                    src="{{ $item['icon_full_url'] ?? asset('assets/admin/img/100x100/2.png') }}"
                                     alt="image">
                                 <div class="txt d-block">{{ translate("messages.{$item->module_name}") }}</div>
                             </div>
@@ -71,9 +71,9 @@
                         </div>
                         <div class="col-lg-6 col-md-8">
                             <div class="venture-img mx-1">
-                                <img src="{{ $item['thumbnail_full_url'] ?? asset('public/assets/admin/img/100x100/2.png') }}"
+                                <img src="{{ $item['thumbnail_full_url'] ?? asset('assets/admin/img/100x100/2.png') }}"
                                     class="img-fluid onerror-image w-100 mw-450"
-                                    data-onerror-image="{{ asset('public/assets/admin/img/100x100/2.png') }}"
+                                    data-onerror-image="{{ asset('assets/admin/img/100x100/2.png') }}"
                                     alt="image">
                             </div>
                         </div>
@@ -109,7 +109,7 @@
 
     <!-- ==== Learn Feature Section Starts Here ==== -->
     <section class="learn-feature-section"
-        style="background: url({{ asset('public/assets/landing/img/learn-feature-bg.svg') }}) no-repeat center center / cover">
+        style="background: url({{ asset('assets/landing/img/learn-feature-bg.svg') }}) no-repeat center center / cover">
         <div class="container position-relative">
             <div class="row gy-5 gx-0 gx-xl-4 align-items-center">
                 <div class=" col-lg-6 pe-lg-5">
@@ -848,13 +848,13 @@
                             <div class="dropdown-menu dropdown-menu-end p-0">
                                 <a href="{{ isset($join_as_seller['playstore_url']) ? $join_as_seller['playstore_url'] : '' }}"
                                     class="dropdown-item">
-                                    <img src="{{ asset('/public/assets/landing/img/google-play.png') }}"
+                                    <img src="{{ asset('assets/landing/img/google-play.png') }}"
                                         alt="">
                                     {{ translate('google_play') }}
                                 </a>
                                 <a href="{{ isset($join_as_seller['apple_store_url']) ? $join_as_seller['apple_store_url'] : '' }}"
                                     class="dropdown-item">
-                                    <img src="{{ asset('/public/assets/landing/img/apple-store.png') }}"
+                                    <img src="{{ asset('assets/landing/img/apple-store.png') }}"
                                         alt="">
                                     {{ translate('apple_store') }}
                                 </a>
@@ -915,14 +915,14 @@
                             <div class="dropdown-menu p-0">
                                 <a href="{{ isset($join_as_dm['playstore_url']) ? $join_as_dm['playstore_url'] : '' }}"
                                     class="dropdown-item">
-                                    <img src="{{ asset('/public/assets/landing/img/google-play.png') }}"
+                                    <img src="{{ asset('assets/landing/img/google-play.png') }}"
                                         alt="">
                                     {{ translate('google_play') }}
                                 </a>
 
                                 <a href="{{ isset($join_as_dm['apple_store_url']) ? $join_as_dm['apple_store_url'] : '' }}"
                                     class="dropdown-item">
-                                    <img src="{{ asset('/public/assets/landing/img/apple-store.png') }}"
+                                    <img src="{{ asset('assets/landing/img/apple-store.png') }}"
                                         alt="">
                                     {{ translate('apple_store') }}
                                 </a>
@@ -1656,7 +1656,7 @@
                                 <div class="feature-card-icon">
                                     <img src="{{ $item['image_full_url'] }}" alt="{{ $item['title'] }}"
                                         class="onerror-image"
-                                        data-onerror-image="{{ asset('public/assets/admin/img/160x160/img2.jpg') }}">
+                                        data-onerror-image="{{ asset('assets/admin/img/160x160/img2.jpg') }}">
                                 </div>
                                 <div class="feature-card-cont">
                                     <h4 class="subtitle">
@@ -1866,8 +1866,8 @@
                         @php($fav = \App\Models\BusinessSetting::where(['key' => 'icon'])->first())
                         <div class="right-side d-flex word-nowrap align-items-center">
                             <img class="onerror-image"
-                                data-onerror-image="{{ asset('public/assets/admin/img/160x160/img2.jpg') }}"
-                                {{--                        src="{{ asset('storage/app/public/business/' . $fav) }}" --}}
+                                data-onerror-image="{{ asset('assets/admin/img/160x160/img2.jpg') }}"
+                                {{--                        src="{{ asset('storage/business/' . $fav) }}" --}}
                                 src="{{ \App\CentralLogics\Helpers::get_full_url('business', $fav?->value ?? '', $fav?->storage[0]?->value ?? 'public', 'favicon') }}"
                                 alt="image">
                             {{ translate('messages.Still increasing') }}
@@ -1917,14 +1917,14 @@
                                 <div class="dropdown-menu p-0 w-75 w-sm-50">
                                     @if (isset($landing_page_links['playstore_url_status']) && $landing_page_links['playstore_url_status'] == '1')
                                         <a href="{{ $landing_page_links['playstore_url'] }}" class="dropdown-item">
-                                            <img src="{{ asset('/public/assets/landing/img/google-play.png') }}"
+                                            <img src="{{ asset('assets/landing/img/google-play.png') }}"
                                                 alt="">
                                             {{ translate('google_play') }}
                                         </a>
                                     @endif
                                     @if (isset($landing_page_links['apple_store_url_status']) && $landing_page_links['apple_store_url_status'] == '1')
                                         <a href="{{ $landing_page_links['apple_store_url'] }}" class="dropdown-item">
-                                            <img src="{{ asset('/public/assets/landing/img/apple-store.png') }}"
+                                            <img src="{{ asset('assets/landing/img/apple-store.png') }}"
                                                 alt="">
                                             {{ translate('apple_store') }}
                                         </a>
@@ -2077,7 +2077,7 @@
                     </div>
                     <div class="modal-body px-sm-5 pb-5">
                         <div class="text-center">
-                            <img src="{{ asset('/public/assets/landing/img/welcome.svg') }}" class="mw-100 mb-3"
+                            <img src="{{ asset('assets/landing/img/welcome.svg') }}" class="mw-100 mb-3"
                                 alt="">
                             <h5 class="mb-3">{{ translate('Welcome_to') }} {{ $business_name }}!</h5>
                             <p class="m-0 mb-4">

@@ -1,11 +1,11 @@
 @extends('layouts.landing.app')
 @section('title', translate('messages.vendor_registration'))
 @push('css_or_js')
-    <link rel="stylesheet" href="{{ asset('public/assets/admin/css/toastr.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/admin/css/view-pages/vendor-registration.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/assets/landing/css/select2.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/toastr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/admin/css/view-pages/vendor-registration.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/landing/css/select2.min.css') }}" />
 
-    <link rel="stylesheet" href="{{asset('public/assets/admin/vendor/icon-set/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/admin/vendor/icon-set/style.css')}}">
 
     <style>
         .password-feedback {
@@ -172,7 +172,7 @@
                                             for="choice_zones">{{ translate('messages.business_zone') }}<span class="text-danger">*</span> <span
                                                 class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                 data-original-title="{{ translate('messages.Select the zone from where the business will be operated') }}"><img
-                                                    src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                    src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="{{ translate('messages.Select the zone from where the business will be operated') }}"></span></label>
                                         <select name="zone_id" id="choice_zones" required
                                             class="form-control __form-control js-select2-custom js-example-basic-single"
@@ -207,7 +207,7 @@
                                                for="choice_zones">{{ translate('messages.pickup_zone') }}<span class="text-danger">*</span> <span
                                                 class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                 data-original-title="{{ translate('messages.Select zones from where customer can choose their pickup locations for trip booking') }}"><img
-                                                    src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                    src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="{{ translate('messages.Select zones from where customer can choose their pickup locations for trip booking') }}"></span></label>
                                         <select name="pickup_zone_id[]" required
                                                 class="form-control multiple-select2"
@@ -230,7 +230,7 @@
                                         <label class="input-label" for="latitude">{{ translate('messages.latitude') }}<span class="text-danger">*</span>
                                             <span class="input-label-secondary"
                                                 title="{{ translate('messages.Pin the business location on the map to auto input latitude of that location') }}"><img
-                                                    src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                    src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="{{ translate('messages.Pin the business location on the map to auto input latitude of that location') }}"></span></label>
                                         <input type="text" id="latitude" name="latitude"
                                             class="form-control __form-control"
@@ -241,7 +241,7 @@
                                         <label class="input-label" for="longitude">{{ translate('messages.longitude') }}<span class="text-danger">*</span>
                                             <span class="input-label-secondary"
                                                 title="{{ translate('messages.Pin the business location on the map to auto input longitude of that location') }}"><img
-                                                    src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                    src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                     alt="{{ translate('messages.Pin the business location on the map to auto input longitude of that location') }}"></span></label>
                                         <input type="text" name="longitude" class="form-control __form-control"
                                             placeholder="{{ translate('messages.Ex:') }} 103.344322" id="longitude"
@@ -301,11 +301,11 @@
                                             </label>
                                             <label class="image--border position-relative h-110 min-w-220">
                                                 <img class="__register-img h-110" id="coverImageViewer"
-                                                    src="{{ asset('public/assets/admin/img/upload-img.png') }}"
+                                                    src="{{ asset('assets/admin/img/upload-img.png') }}"
                                                     alt="Product thumbnail" style="display: none" />
                                                 <div class="upload-file__textbox p-2 h-100">
                                                     <img width="34" height="34"
-                                                        src="{{ asset('public/assets/admin/img/document-upload.png') }}"
+                                                        src="{{ asset('assets/admin/img/document-upload.png') }}"
                                                         alt="" class="svg">
                                                     <h6 class="mt-2 text-center font-semibold fs-12">
                                                         <span
@@ -319,7 +319,7 @@
                                                         <input type="file" name="cover_photo" id="coverImageUpload"
                                                             class="form-control __form-control"
                                                             accept=".webp, .jpg, .png, .jpeg|image/*">
-                                                        <img src="{{ asset('public/assets/admin/img/pen.png') }}"
+                                                        <img src="{{ asset('assets/admin/img/pen.png') }}"
                                                             alt="">
                                                     </div>
                                                 </div>
@@ -337,11 +337,11 @@
                                             <label
                                                 class="image--border position-relative img--100px w-100 h-110 max-w-110">
                                                 <img class="__register-img h-110" id="logoImageViewer"
-                                                    src="{{ asset('public/assets/admin/img/upload-img.png') }}"
+                                                    src="{{ asset('assets/admin/img/upload-img.png') }}"
                                                     alt="Product thumbnail" style="display: none" />
                                                 <div class="upload-file__textbox p-2 h-100">
                                                     <img width="34" height="34"
-                                                        src="{{ asset('public/assets/admin/img/document-upload.png') }}"
+                                                        src="{{ asset('assets/admin/img/document-upload.png') }}"
                                                         alt="" class="svg">
                                                     <h6 class="mt-2 text-center font-semibold fs-12">
                                                         <span
@@ -355,7 +355,7 @@
                                                         <input type="file" name="logo" id="customFileEg1"
                                                             class="form-control __form-control"
                                                             accept=".webp, .jpg, .png, .jpeg|image/*">
-                                                        <img src="{{ asset('public/assets/admin/img/pen.png') }}"
+                                                        <img src="{{ asset('assets/admin/img/pen.png') }}"
                                                             alt="">
                                                     </div>
                                                 </div>
@@ -448,9 +448,9 @@
                                                 </div>
                                                 <div>
                                                     <div id="file-assets"
-                                                         data-picture-icon="{{ asset('public/assets/admin/img/picture.svg') }}"
-                                                         data-document-icon="{{ asset('public/assets/admin/img/document.svg') }}"
-                                                         data-blank-thumbnail="{{ asset('public/assets/admin/img/picture.svg') }}">
+                                                         data-picture-icon="{{ asset('assets/admin/img/picture.svg') }}"
+                                                         data-document-icon="{{ asset('assets/admin/img/document.svg') }}"
+                                                         data-blank-thumbnail="{{ asset('assets/admin/img/picture.svg') }}">
                                                     </div>
                                                     <!-- Upload box -->
                                                     <div class="d-flex justify-content-center" id="pdf-container">
@@ -458,7 +458,7 @@
                                                             <input type="file" name="tin_certificate_image" class="document_input" accept=".doc, .pdf, .jpg, .png, .jpeg">
                                                             <div class="textbox">
                                                                 <img width="40" height="40" class="svg"
-                                                                     src="{{ asset('public/assets/admin/img/doc-uploaded.png') }}"
+                                                                     src="{{ asset('assets/admin/img/doc-uploaded.png') }}"
                                                                      alt="">
                                                                 <p class="fs-12 mb-0">Select a file or <span class="font-semibold">Drag & Drop</span>
                                                                     here</p>
@@ -503,7 +503,7 @@
                                                     <span class="form-label-secondary" data-toggle="tooltip"
                                                         data-placement="right"
                                                         data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img
-                                                            src="{{ asset('/public/assets/admin/img/info-circle.svg') }}"
+                                                            src="{{ asset('assets/admin/img/info-circle.svg') }}"
                                                             alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span>
 
                                                 </label>
@@ -707,11 +707,11 @@
 @endsection
 @push('script_2')
 
-    <script src="{{ asset('public/assets/admin/js/file-preview/pdf.min.js') }}"></script>
-    <script src="{{ asset('public/assets/admin/js/file-preview/pdf-worker.min.js') }}"></script>
-    <script src="{{ asset('public/assets/admin/js/file-preview/add-multiple-document-upload.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/pdf.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/pdf-worker.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/add-multiple-document-upload.js') }}"></script>
 
-    <script src="{{ asset('public/assets/admin/js/spartan-multi-image-picker.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/spartan-multi-image-picker.js') }}"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key={{ \App\Models\BusinessSetting::where('key', 'map_api_key')->first()->value }}&libraries=drawing,places&v=3.45.8">
     </script>
@@ -838,7 +838,7 @@
             });
         });
     </script>
-    <script src="{{ asset('public/assets/admin/js/view-pages/vendor-registration.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/view-pages/vendor-registration.js') }}"></script>
     @if (isset($recaptcha) && $recaptcha['status'] == 1)
         <script type="text/javascript">
             "use strict";
@@ -1006,7 +1006,7 @@
 
         });
     </script>
-    <script src="{{ asset('public/assets/landing/js/select2.min.js') }}"></script>
+    <script src="{{ asset('assets/landing/js/select2.min.js') }}"></script>
 
     <script>
         // ---- file upload with textbox

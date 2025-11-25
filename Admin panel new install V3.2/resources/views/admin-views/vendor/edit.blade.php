@@ -2,7 +2,7 @@
 
 @section('title','Update restaurant info')
 @push('css_or_js')
-    {{-- <link rel="stylesheet" href="{{asset('/public/assets/admin/css/intlTelInput.css')}}" /> --}}
+    {{-- <link rel="stylesheet" href="{{asset('assets/admin/css/intlTelInput.css')}}" /> --}}
 
     @endpush
 
@@ -12,7 +12,7 @@
         <div class="page-header">
             <h1 class="page-header-title">
                 <span class="page-header-icon">
-                    <img src="{{asset('public/assets/admin/img/edit.png')}}" class="w--26" alt="">
+                    <img src="{{asset('assets/admin/img/edit.png')}}" class="w--26" alt="">
                 </span>
                 <span>{{translate('messages.update_store')}}</span>
             </h1>
@@ -142,8 +142,8 @@
                                     </label>
                                     <label class="text-center position-relative">
                                         <img class="img--110 min-height-170px min-width-170px onerror-image image--border" id="viewer"
-                                        data-onerror-image="{{ asset('public/assets/admin/img/upload-img.png') }}"
-                                        src="{{ $store->logo_full_url ?? asset('public/assets/admin/img/upload-img.png') }}"
+                                        data-onerror-image="{{ asset('assets/admin/img/upload-img.png') }}"
+                                        src="{{ $store->logo_full_url ?? asset('assets/admin/img/upload-img.png') }}"
                                             alt="logo image" />
                                         <div class="icon-file-group">
                                             <div class="icon-file">
@@ -163,8 +163,8 @@
                                     </label>
                                     <label class="text-center position-relative">
                                         <img class="img--vertical min-height-170px min-width-170px onerror-image image--border" id="coverImageViewer"
-                                        data-onerror-image="{{ asset('public/assets/admin/img/upload-img.png') }}"
-                                        src="{{ $store->cover_photo_full_url ?? asset('public/assets/admin/img/upload-img.png') }}"
+                                        data-onerror-image="{{ asset('assets/admin/img/upload-img.png') }}"
+                                        src="{{ $store->cover_photo_full_url ?? asset('assets/admin/img/upload-img.png') }}"
                                             alt="Fav icon" />
                                         <div class="icon-file-group">
                                             <div class="icon-file">
@@ -183,7 +183,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title m-0 d-flex align-items-center">
-                                <img class="mr-2 align-self-start w--20" src="{{asset('public/assets/admin/img/resturant.png')}}" alt="instructions">
+                                <img class="mr-2 align-self-start w--20" src="{{asset('assets/admin/img/resturant.png')}}" alt="instructions">
                                 <span>{{translate('store_information')}}</span>
                             </h4>
                         </div>
@@ -233,7 +233,7 @@
                                     <div class="form-group">
                                         <label class="input-label" for="choice_zones">{{translate('messages.zone')}}<span
                                                 class="form-label-secondary" data-toggle="tooltip" data-placement="right"
-        data-original-title="{{translate('messages.select_zone_for_map')}}"><img src="{{asset('/public/assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.select_zone_for_map')}}"></span></label>
+        data-original-title="{{translate('messages.select_zone_for_map')}}"><img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.select_zone_for_map')}}"></span></label>
                                         <select name="zone_id" id="choice_zones" data-placeholder="{{translate('messages.select_zone')}}"
                                                 class="form-control js-select2-custom get_zone_data">
                                             @foreach(\App\Models\Zone::active()->get() as $zone)
@@ -252,7 +252,7 @@
                                             <span
                                                 class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                 data-original-title="{{translate('messages.store_lat_lng_warning')}}">
-                                                <img src="{{asset('/public/assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.store_lat_lng_warning')}}">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.store_lat_lng_warning')}}">
                                             </span>
                                         </label>
                                         <input type="text" id="latitude"
@@ -264,7 +264,7 @@
                                             <span
                                                 class="form-label-secondary" data-toggle="tooltip" data-placement="right"
                                                 data-original-title="{{translate('messages.store_lat_lng_warning')}}">
-                                                <img src="{{asset('/public/assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.store_lat_lng_warning')}}">
+                                                <img src="{{asset('assets/admin/img/info-circle.svg')}}" alt="{{translate('messages.store_lat_lng_warning')}}">
                                             </span>
                                         </label>
                                         <input type="text"
@@ -336,7 +336,7 @@
                                 <div class="col-md-4 col-sm-6">
                                     <div class="js-form-message form-group mb-0">
                                         <label class="input-label" for="signupSrPassword">{{ translate('password') }}<span class="form-label-secondary" data-toggle="tooltip" data-placement="right"
-                                 data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('/public/assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
+                                 data-original-title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"><img src="{{ asset('assets/admin/img/info-circle.svg') }}" alt="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"></span></label>
 
                                         <div class="input-group input-group-merge">
                                             <input type="password" class="js-toggle-password form-control" name="password" id="signupSrPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="{{ translate('messages.Must_contain_at_least_one_number_and_one_uppercase_and_lowercase_letter_and_symbol,_and_at_least_8_or_more_characters') }}"
@@ -419,9 +419,9 @@
                                         </div>
                                         <div>
                                             <div id="file-assets"
-                                                 data-picture-icon="{{ asset('public/assets/admin/img/picture.svg') }}"
-                                                 data-document-icon="{{ asset('public/assets/admin/img/document.svg') }}"
-                                                 data-blank-thumbnail="{{ asset('public/assets/admin/img/picture.svg') }}">
+                                                 data-picture-icon="{{ asset('assets/admin/img/picture.svg') }}"
+                                                 data-document-icon="{{ asset('assets/admin/img/document.svg') }}"
+                                                 data-blank-thumbnail="{{ asset('assets/admin/img/picture.svg') }}">
                                             </div>
                                             <!-- Upload box -->
                                             <div class="d-flex justify-content-center" id="pdf-container">
@@ -429,26 +429,26 @@
                                                     <input type="file" name="tin_certificate_image" class="document_input" accept=".doc, .pdf, .jpg, .png, .jpeg">
                                                     <div class="textbox">
                                                         <img width="40" height="40" class="svg"
-                                                             src="{{ asset('public/assets/admin/img/doc-uploaded.png') }}"
+                                                             src="{{ asset('assets/admin/img/doc-uploaded.png') }}"
                                                              alt="">
                                                         <p class="fs-12 mb-0">Select a file or <span class="font-semibold">Drag & Drop</span>
                                                             here</p>
                                                     </div>
                                                 </div>
-                                                <div class="pdf-single" data-file-name="${file.name}" data-file-url="{{ $store->tin_certificate_image_full_url ?? asset('public/assets/admin/img/upload-cloud.png') }}">
+                                                <div class="pdf-single" data-file-name="${file.name}" data-file-url="{{ $store->tin_certificate_image_full_url ?? asset('assets/admin/img/upload-cloud.png') }}">
                                                     <div class="pdf-frame">
-                                                        @php($imgPath =  $store->tin_certificate_image_full_url ?? asset('public/assets/admin/img/upload-cloud.png'))
+                                                        @php($imgPath =  $store->tin_certificate_image_full_url ?? asset('assets/admin/img/upload-cloud.png'))
                                                         @if(Str::endsWith($imgPath, ['.pdf', '.doc', '.docx']))
-                                                            @php($imgPath =  asset('public/assets/admin/img/document.svg'))
+                                                            @php($imgPath =  asset('assets/admin/img/document.svg'))
                                                         @endif
                                                         <img class="pdf-thumbnail-alt" src="{{ $imgPath }}" alt="File Thumbnail">
                                                     </div>
                                                     <div class="overlay">
                                                         <div class="pdf-info">
                                                             @if(Str::endsWith($imgPath, ['.pdf', '.doc', '.docx']))
-                                                                <img src="{{ asset('public/assets/admin/img/document.svg') }}" width="34" alt="File Type Logo">
+                                                                <img src="{{ asset('assets/admin/img/document.svg') }}" width="34" alt="File Type Logo">
                                                             @else
-                                                                <img src="{{ asset('public/assets/admin/img/picture.svg') }}" width="34" alt="File Type Logo">
+                                                                <img src="{{ asset('assets/admin/img/picture.svg') }}" width="34" alt="File Type Logo">
                                                             @endif
                                                             <div class="file-name-wrapper">
                                                                 <span class="file-name js-filename-truncate">{{ $store->tin_certificate_image }}</span>
@@ -478,11 +478,11 @@
 @endsection
 
 @push('script_2')
-    <script src="{{ asset('public/assets/admin/js/file-preview/pdf.min.js') }}"></script>
-    <script src="{{ asset('public/assets/admin/js/file-preview/pdf-worker.min.js') }}"></script>
-    <script src="{{ asset('public/assets/admin/js/file-preview/edit-multiple-document-upload.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/pdf.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/pdf-worker.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/edit-multiple-document-upload.js') }}"></script>
 
-    <script src="{{asset('public/assets/admin/js/spartan-multi-image-picker.js')}}"></script>
+    <script src="{{asset('assets/admin/js/spartan-multi-image-picker.js')}}"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key={{\App\Models\BusinessSetting::where('key', 'map_api_key')->first()->value}}&libraries=places&callback=initMap&v=3.45.8"></script>
     <script>
@@ -531,7 +531,7 @@
                 groupClassName: 'col-lg-2 col-md-4 col-sm-4 col-6',
                 maxFileSize: '',
                 placeholderImage: {
-                    image: '{{asset('public/assets/admin/img/400x400/img2.jpg')}}',
+                    image: '{{asset('assets/admin/img/400x400/img2.jpg')}}',
                     width: '100%'
                 },
                 dropFileLabel: "Drop Here",
@@ -711,9 +711,9 @@
         });
 
     $('#reset_btn').click(function(){
-        $('#viewer').attr('src', "{{ asset('public/assets/admin/img/upload.png') }}");
+        $('#viewer').attr('src', "{{ asset('assets/admin/img/upload.png') }}");
         $('#customFileEg1').val(null);
-        $('#coverImageViewer').attr('src', "{{ asset('public/assets/admin/img/upload-img.png') }}");
+        $('#coverImageViewer').attr('src', "{{ asset('assets/admin/img/upload-img.png') }}");
         $('#coverImageUpload').val(null);
         $('#choice_zones').val(null).trigger('change');
         $('#module_id').val(null).trigger('change');
@@ -789,7 +789,7 @@
                         };
                         reader.readAsDataURL(file);
                     } else {
-                        imagePreview.attr('src', '{{ asset('public/assets/admin/img/file-icon.png') }}').removeClass('display-none');
+                        imagePreview.attr('src', '{{ asset('assets/admin/img/file-icon.png') }}').removeClass('display-none');
                         textBox.hide();
                     }
                 });

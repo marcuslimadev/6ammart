@@ -4,7 +4,7 @@
 
 @push('css_or_js')
     <!-- Custom styles for this page -->
-    <link href="{{ asset('public/assets/admin/css/croppie.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/admin/css/croppie.css') }}" rel="stylesheet">
 @endpush
 
 @section('content')
@@ -24,7 +24,7 @@
                             </h5>
                             <div class="d-flex align-items-center justify-content-center mt-3">
                                 <div class="cash-icon mr-3">
-                                    <img src="{{ asset('public/assets/admin/img/cash.png') }}" alt="img">
+                                    <img src="{{ asset('assets/admin/img/cash.png') }}" alt="img">
                                 </div>
                                 <h2 class="cash--title text-white">
                                     {{ \App\CentralLogics\Helpers::format_currency($wallet->collected_cash) }}</h2>
@@ -48,7 +48,7 @@
                                     {{ \App\CentralLogics\Helpers::format_currency($wallet->pending_withdraw) }}</h4>
                                 <div class="subtitle">{{ translate('messages.pending_withdraw') }}</div>
                                 <img class="resturant-icon w--30"
-                                    src="{{ asset('public/assets/admin/img/transactions/pending.png') }}" alt="transaction">
+                                    src="{{ asset('assets/admin/img/transactions/pending.png') }}" alt="transaction">
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                                     {{ \App\CentralLogics\Helpers::format_currency($wallet->total_withdrawn) }}</h4>
                                 <div class="subtitle">{{ translate('messages.total_withdrawal_amount') }}</div>
                                 <img class="resturant-icon w--30"
-                                    src="{{ asset('public/assets/admin/img/transactions/withdraw-amount.png') }}"
+                                    src="{{ asset('assets/admin/img/transactions/withdraw-amount.png') }}"
                                     alt="transaction">
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                                 </h4>
                                 <div class="subtitle">{{ translate('messages.withdraw_able_balance') }}</div>
                                 <img class="resturant-icon w--30"
-                                    src="{{ asset('public/assets/admin/img/transactions/withdraw-balance.png') }}"
+                                    src="{{ asset('assets/admin/img/transactions/withdraw-balance.png') }}"
                                     alt="transaction">
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                     {{ \App\CentralLogics\Helpers::format_currency($wallet->total_earning) }}</h4>
                                 <div class="subtitle">{{ translate('messages.total_earning') }}</div>
                                 <img class="resturant-icon w--30"
-                                    src="{{ asset('public/assets/admin/img/transactions/earning.png') }}"
+                                    src="{{ asset('assets/admin/img/transactions/earning.png') }}"
                                     alt="transaction">
                             </div>
                         </div>
@@ -108,8 +108,8 @@
                         <div class="resturant--info-address">
                             <div class="logo">
                                 <img class="onerror-image"
-                                    data-onerror-image="{{ asset('public/assets/admin/img/100x100/1.png') }}"
-                                    src="{{ $store->logo_full_url ?? asset('public/assets/admin/img/100x100/1.png') }}"
+                                    data-onerror-image="{{ asset('assets/admin/img/100x100/1.png') }}"
+                                    src="{{ $store->logo_full_url ?? asset('assets/admin/img/100x100/1.png') }}"
                                     alt="{{ $store->name }} Logo">
                             </div>
                             <ul class="address-info list-unstyled list-unstyled-py-3 text-dark">
@@ -165,8 +165,8 @@
                         <div class="resturant--info-address">
                             <div class="avatar avatar-xxl avatar-circle avatar-border-lg">
                                 <img class="avatar-img onerror-image"
-                                    data-onerror-image="{{ asset('public/assets/admin/img/160x160/img1.jpg') }}"
-                                    src="{{ $store->vendor->image_full_url ?? asset('public/assets/admin/img/160x160/img1.jpg') }}"
+                                    data-onerror-image="{{ asset('assets/admin/img/160x160/img1.jpg') }}"
+                                    src="{{ $store->vendor->image_full_url ?? asset('assets/admin/img/160x160/img1.jpg') }}"
                                     alt="Image Description">
                             </div>
                             <ul class="address-info address-info-2 list-unstyled list-unstyled-py-3 text-dark">
@@ -292,11 +292,11 @@
                     <div class="card-body">
                         <div class="resturant--info-address flex-sm-nowrap flex-wrap gap-2">
                             <div class="pdf-single  cus-document-responsive"
-                                data-pdf-url="{{ $store->tin_certificate_image_full_url ?? asset('public/assets/admin/img/upload-cloud.png') }}">
+                                data-pdf-url="{{ $store->tin_certificate_image_full_url ?? asset('assets/admin/img/upload-cloud.png') }}">
                                 <div class="pdf-frame">
-                                    @php($imgPath = $store->tin_certificate_image_full_url ?? asset('public/assets/admin/img/upload-cloud.png'))
+                                    @php($imgPath = $store->tin_certificate_image_full_url ?? asset('assets/admin/img/upload-cloud.png'))
                                     @if (Str::endsWith($imgPath, ['.pdf', '.doc', '.docx']))
-                                        @php($imgPath = asset('public/assets/admin/img/document.svg'))
+                                        @php($imgPath = asset('assets/admin/img/document.svg'))
                                     @endif
                                     <img class="pdf-thumbnail-alt" src="{{ $imgPath }}" alt="File Thumbnail">
                                 </div>
@@ -306,10 +306,10 @@
                                     </a>
                                     <div class="pdf-info d-flex gap-10px align-items-center">
                                         @if (Str::endsWith($imgPath, ['.pdf', '.doc', '.docx']))
-                                            <img src="{{ asset('public/assets/admin/img/document.svg') }}" width="34"
+                                            <img src="{{ asset('assets/admin/img/document.svg') }}" width="34"
                                                 alt="File Type Logo">
                                         @else
-                                            <img src="{{ asset('public/assets/admin/img/picture.svg') }}" width="34"
+                                            <img src="{{ asset('assets/admin/img/picture.svg') }}" width="34"
                                                 alt="File Type Logo">
                                         @endif
                                         <div class="fs-13 text--title d-flex flex-column">
@@ -388,7 +388,7 @@
 
 @push('script_2')
     <!-- Page level plugins -->
-    <script src="{{ asset('public/assets/admin/js/file-preview/details-multiple-document-upload.js') }}"></script>
+    <script src="{{ asset('assets/admin/js/file-preview/details-multiple-document-upload.js') }}"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key={{ \App\Models\BusinessSetting::where('key', 'map_api_key')->first()->value }}&callback=initMap&v=3.45.8">
     </script>

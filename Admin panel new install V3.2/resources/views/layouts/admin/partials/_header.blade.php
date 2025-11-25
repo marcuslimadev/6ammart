@@ -23,7 +23,7 @@
                     <li class="nav-item __nav-item">
                         <a href="{{ route('admin.users.dashboard')}}" id="tourb-6"
                            class="__nav-link {{ Request::is('admin/users*') ? 'active' : '' }}">
-                            <img src="{{asset('/public/assets/admin/img/new-img/user.svg')}}" alt="public/img">
+                            <img src="{{asset('assets/admin/img/new-img/user.svg')}}" alt="public/img">
                             <span>{{ translate('Users')}}</span>
                         </a>
                     </li>
@@ -31,7 +31,7 @@
                     <li class="nav-item __nav-item">
                         <a href="{{ route('admin.transactions.store.withdraw_list')}}" id="tourb-7"
                            class="__nav-link {{ Request::is('admin/transactions*') ? 'active' : '' }}">
-                            <img src="{{asset('/public/assets/admin/img/new-img/transaction-and-report.svg')}}"
+                            <img src="{{asset('assets/admin/img/new-img/transaction-and-report.svg')}}"
                                  alt="public/img">
                             <span>{{ translate('Transactions & Reports')}}</span>
                         </a>
@@ -40,7 +40,7 @@
                     <li class="nav-item __nav-item">
                         <a href="{{ route('admin.business-settings.business-setup') }}" id="tourb-3"
                            class="__nav-link {{ Request::is('admin/business-settings*') ? 'active' : '' }}">
-                            <img src="{{asset('/public/assets/admin/img/new-img/setting-icon.svg')}}" alt="public/img">
+                            <img src="{{asset('assets/admin/img/new-img/setting-icon.svg')}}" alt="public/img">
                             <span>{{ translate('messages.Settings') }}</span>
                             <svg width="14" viewBox="0 0 14 14" fill="none">
                                 <path d="M2.33325 5.25L6.99992 9.91667L11.6666 5.25" stroke="#006161" stroke-width="1.5"
@@ -63,7 +63,7 @@
                                             <a href="{{ route('admin.business-settings.module.index') }}"
                                                class="next-tour">
                                                 <img
-                                                    src="{{asset('/public/assets/admin/img/navbar-setting-icon/module.svg')}}"
+                                                    src="{{asset('assets/admin/img/navbar-setting-icon/module.svg')}}"
                                                     alt="">
                                                 <span>{{translate('System Module Setup')}}</span>
                                             </a>
@@ -74,7 +74,7 @@
                                             <a href="{{ route('admin.business-settings.zone.home') }}"
                                                class="next-tour">
                                                 <img
-                                                    src="{{asset('/public/assets/admin/img/navbar-setting-icon/location.svg')}}"
+                                                    src="{{asset('assets/admin/img/navbar-setting-icon/location.svg')}}"
                                                     alt="">
                                                 <span>{{translate('Zone Setup')}}</span>
                                             </a>
@@ -85,7 +85,7 @@
                                             <a href="{{ route('admin.business-settings.business-setup') }}"
                                                class="next-tour">
                                                 <img
-                                                    src="{{asset('/public/assets/admin/img/navbar-setting-icon/business.svg')}}"
+                                                    src="{{asset('assets/admin/img/navbar-setting-icon/business.svg')}}"
                                                     alt="">
                                                 <span>{{translate('Business Settings')}}</span>
                                             </a>
@@ -97,7 +97,7 @@
                                             <a href="{{ route('admin.business-settings.third-party.payment-method') }}"
                                                class="next-tour">
                                                 <img
-                                                    src="{{asset('/public/assets/admin/img/navbar-setting-icon/third-party.svg')}}"
+                                                    src="{{asset('assets/admin/img/navbar-setting-icon/third-party.svg')}}"
                                                     alt="">
                                                 <span>{{translate('3rd Party')}}</span>
                                             </a>
@@ -106,7 +106,7 @@
                                             <a href="{{route('admin.business-settings.social-media.index')}}"
                                                class="next-tour">
                                                 <img
-                                                    src="{{asset('/public/assets/admin/img/navbar-setting-icon/social.svg')}}"
+                                                    src="{{asset('assets/admin/img/navbar-setting-icon/social.svg')}}"
                                                     alt="">
                                                 <span>{{translate('Social Media and Page Setup')}}</span>
                                             </a>
@@ -124,7 +124,7 @@
                         <li class="nav-item __nav-item">
                             <a href="{{ route('admin.dispatch.dashboard')}}" id="tourb-8"
                                class="__nav-link {{ Request::is('admin/dispatch*') ? 'active' : '' }}">
-                                <img src="{{asset('/public/assets/admin/img/new-img/dispatch.svg')}}" alt="public/img">
+                                <img src="{{asset('assets/admin/img/new-img/dispatch.svg')}}" alt="public/img">
                                 <span>{{ translate('Dispatch Management')}}</span>
                             </a>
                         </li>
@@ -139,7 +139,7 @@
                                     <span class="bg-E7E6E8 border ctrlplusk d-md-block d-none font-bold fs-12 fw-bold lh-1 ms-1 px-1 rounded text-muted">Ctrl+K</span>
 
                                 </span>
-                                <img width="14" class="h-auto" src="{{asset('/public/assets/admin/img/new-img/search.svg')}}" class="svg" alt="">
+                                <img width="14" class="h-auto" src="{{asset('assets/admin/img/new-img/search.svg')}}" class="svg" alt="">
                             </div>
                         </button>
                     </li>
@@ -147,7 +147,7 @@
                     <li class="nav-item max-sm-m-0  mr-lg-3">
                         <a class="btn btn-icon rounded-circle nav-msg-icon"
                            href="{{route('admin.message.list')}}">
-                            <img src="{{asset('/public/assets/admin/img/new-img/message-icon.svg')}}" alt="public/img">
+                            <img src="{{asset('assets/admin/img/new-img/message-icon.svg')}}" alt="public/img">
                             @php($message=\App\Models\Conversation::whereUserType('admin')->whereHas('last_message', function($query) {
                                 $query->whereColumn('conversations.sender_id', 'messages.sender_id');
                             })->where('unread_message_count', '>', 0)->count())
@@ -198,14 +198,14 @@
                             @if ($mod)
                                 <img src="{{ $mod->icon_full_url }}"
                                      class="onerror-image"
-                                     data-onerror-image="{{asset('/public/assets/admin/img/new-img/module-icon.svg')}}"
+                                     data-onerror-image="{{asset('assets/admin/img/new-img/module-icon.svg')}}"
                                      width="20px" alt="public/img">
                             @else
-                                <img src="{{asset('/public/assets/admin/img/new-img/module-icon.svg')}}"
+                                <img src="{{asset('assets/admin/img/new-img/module-icon.svg')}}"
                                      alt="public/img">
                             @endif
                             <span class="text-white">{{ $mod ? $mod->module_name : translate('modules') }}</span>
-                            <img src="{{asset('/public/assets/admin/img/new-img/angle-white.svg')}}"
+                            <img src="{{asset('assets/admin/img/new-img/angle-white.svg')}}"
                                  class="d-none d-lg-block ml-xl-2" alt="public/img">
                         </a>
                         <div class="__nav-module style-2" id="tourb-1">
@@ -242,7 +242,7 @@
                                                 <div class="img w--70px ">
                                                     <img src="{{ $module?->icon_full_url }}"
 
-                                                         data-onerror-image="{{asset('public/assets/admin/img/new-img/module/e-shop.svg')}}"
+                                                         data-onerror-image="{{asset('assets/admin/img/new-img/module/e-shop.svg')}}"
                                                          alt="new-img" class="mw-100 onerror-image">
                                                 </div>
                                                 <div>
@@ -262,7 +262,7 @@
                                 </div>
                             @else
                                 <div class="__nav-module-body text-center py-5">
-                                    <img class="w--120px" src="{{ asset('/public/assets/admin/img/empty-box.png') }}"
+                                    <img class="w--120px" src="{{ asset('assets/admin/img/empty-box.png') }}"
                                          alt="">
                                     <h2 class="my-4">{{ translate('Please, Enable or Create Module First') }}</h2>
                                     <a href="{{ route('admin.business-settings.module.index') }}"
@@ -309,13 +309,13 @@
 <div class="toggle-tour">
     <a href="https://youtube.com/playlist?list=PLLFMbDpKMZBxgtX3n3rKJvO5tlU8-ae2Y" target="_blank"
        class="d-flex align-items-center gap-10px">
-        <img src="{{ asset('public/assets/admin/img/tutorial.svg') }}" alt="">
+        <img src="{{ asset('assets/admin/img/tutorial.svg') }}" alt="">
         <span>
             <span class="text-capitalize">{{ translate('Turotial') }}</span>
         </span>
     </a>
     <div class="d-flex align-items-center gap-10px restart-Tour">
-        <img src="{{ asset('public/assets/admin/img/tour.svg') }}" alt="">
+        <img src="{{ asset('assets/admin/img/tour.svg') }}" alt="">
         <span>
             <span class="text-capitalize">{{ translate('Tour') }}</span>
         </span>
