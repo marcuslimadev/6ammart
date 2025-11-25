@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\CentralLogics\Helpers;
 use App\Http\Controllers\PaytmController;
 use App\Http\Controllers\LiqPayController;
 use App\Http\Controllers\PaymobController;
@@ -58,6 +59,15 @@ Route::get('/password-reset', 'LoginController@reset_password')->name('change-pa
 Route::post('verify-otp', 'LoginController@verify_token')->name('verify-otp');
 Route::post('reset-password-submit', 'LoginController@reset_password_submit')->name('reset-password-submit');
 Route::get('otp-resent', 'LoginController@otp_resent')->name('otp_resent');
+
+// Legacy compatibility: map the fixed admin auth URL to the dynamic login slug
+Route::get('admin/auth/login', function () {
+    $slug = Helpers::get_login_url('admin_login_url');
+
+    abort_if(!$slug, 404);
+
+    return redirect()->route('login', [$slug]);
+});
 
 Route::get('authentication-failed', function () {
     $errors = [];
